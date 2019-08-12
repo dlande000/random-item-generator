@@ -1,7 +1,10 @@
 import csv
 import random
 
-def random_item_generator (file_path):
+def random_item_generator ():
+    print("Enter a file path:")
+    file_path = raw_input()
+
     with open(file_path, 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
         items = {}
@@ -13,4 +16,4 @@ def random_item_generator (file_path):
         
         print(items[random.randint(1,len(items))])
 
-random_item_generator('spreadsheet.csv')
+random_item_generator()

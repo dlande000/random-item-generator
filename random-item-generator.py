@@ -1,4 +1,5 @@
 import csv
+import random
 
 with open('spreadsheet.csv', 'r') as csvfile:
     csv_reader = csv.reader(csvfile)
@@ -6,7 +7,7 @@ with open('spreadsheet.csv', 'r') as csvfile:
     counter = 1
 
     for line in csv_reader:
-        items[counter] = line
+        items[counter] = line[0]
         counter += 1
     
-    print(items)
+    print(random.randint(1,len(items)))

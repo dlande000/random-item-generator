@@ -11,7 +11,7 @@ else:
         csv_reader = csv.reader(csvfile)
         items = {}
         counter = 1
-        
+
         for line in csv_reader:
             if len(line) == 1:
                 items[counter] = line[0]

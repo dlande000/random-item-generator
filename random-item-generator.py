@@ -10,4 +10,4 @@ with open('spreadsheet.csv', 'r') as csvfile:
         items[counter] = line[0]
         counter += 1
     
-    print(random.randint(1,len(items)))
+    print(items[random.randint(1,len(items))])

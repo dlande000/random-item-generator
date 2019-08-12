@@ -1,7 +1,7 @@
 import csv
 import random
 
-print("Enter a file path:")
+print("Enter a file path including the .csv extension:")
 file_path = raw_input()
 
 if (file_path[-3:] != "csv"):

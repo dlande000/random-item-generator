@@ -13,8 +13,7 @@ def random_item_generator ():
     else:
         generate_title(file_path)
     
-def generate_title (file_path):
-    items = {}
+def generate_title (file_path, items = {}):
     counter = 1
 
     with open(file_path, 'r') as csvfile:
@@ -35,7 +34,7 @@ def generate_title (file_path):
     if answer == "n":
         return
     elif answer == "y":
-        generate_title(file_path)
+        generate_title(file_path, items)
     else:
         print("Please use Y for Yes or N for No.")
 

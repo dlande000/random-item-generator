@@ -14,17 +14,16 @@ def random_item_generator ():
         generate_title(file_path)
     
 def generate_title (file_path, items = {}):
-    counter = 1
-
-    with open(file_path, 'r') as csvfile:
-        csv_reader = csv.reader(csvfile)
-
-        for line in csv_reader:
-            if len(line) == 1:
-                items[counter] = line[0]
-            else:
-                items[counter] = line
-            counter += 1
+    if len(items) == 0:
+        counter = 1
+        with open(file_path, 'r') as csvfile:
+            csv_reader = csv.reader(csvfile)
+            for line in csv_reader:
+                if len(line) == 1:
+                    items[counter] = line[0]
+                else:
+                    items[counter] = line
+                counter += 1
 
     print(items[random.randint(1,len(items))])
     time.sleep(.5)
